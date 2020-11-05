@@ -27,7 +27,7 @@ export class MoviesController {
     delete(@Param("id") id:number){
         return this.moviesService.deleteOne(id);
     }
-
+    
     @Patch(":id")
     update(@Param("id") id:number, @Body() data : UpdateMovieDto){
         return this.moviesService.update(id,data);
