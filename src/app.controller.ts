@@ -5,6 +5,6 @@ export class AppController {
 
     @Get()
     home(){
-        return "Hello world";
+        return "Hello World!";
     }
 }

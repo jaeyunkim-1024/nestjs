@@ -10,7 +10,7 @@ export class MovieService {
         return this.movies;
     }
 
-    getOne(id) : Movie{
+    getOne(id:number) : Movie{           
         const movie = this.movies.find(movie=> movie.id === id);
         if(!movie){
             throw new NotFoundException('Not Found the movie id is '+id);
@@ -18,10 +18,11 @@ export class MovieService {
         return movie;
     }
 
-    crateMovie(data){
+    crateMovie(data:TxMovie){
+        let insertMovie:Movie = JSON.parse(JSON.stringify(data));        
         this.movies.push({
             id : this.movies.length + 1,
-            ...data        
+            ...insertMovie        
         });
     }
 
