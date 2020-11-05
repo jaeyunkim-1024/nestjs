@@ -1,9 +1,9 @@
 import { NotFoundException } from '@nestjs/common';
 import { Test, TestingModule } from '@nestjs/testing';
-import { CoffeService } from './coffe.service';
+import { MovieService } from './movie.service';
 
 describe('Unit test', () => {
-  let provider: CoffeService;
+  let provider: MovieService;
   let createData = {
     title : "영화"
     ,year : 20201105
@@ -16,9 +16,9 @@ describe('Unit test', () => {
 
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
-      providers: [CoffeService],
+      providers: [MovieService],
     }).compile();
-    provider = module.get<CoffeService>(CoffeService);    
+    provider = module.get<MovieService>(MovieService);    
   });  
 
   it('STEP 1 : should be defined - provider', () => {

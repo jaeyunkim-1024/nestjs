@@ -1,9 +1,9 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
-import { Movie } from 'src/movies/entities/movie.entity';
-import { TxMovie } from 'src/movies/entities/movie.tx.entity';
+import { Movie } from './entities/movie.entity';
+import { TxMovie } from './entities/movie.tx.entity';
 
 @Injectable()
-export class CoffeService {
+export class MovieService {
     private movies : Movie[] = [];
 
     getAll() : Movie[]{
