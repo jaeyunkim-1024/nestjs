@@ -1,6 +1,3 @@
-export class Movie{
-    id : number;
-    title : string;
-    year : number;
-    genres : string[];
-}
+import { CommonMovie } from "./movie.common.entity";
+
+export class Movie extends CommonMovie{}
